@@ -1,0 +1,5 @@
+SELECT MIN(SALARY * MONTHS) , COUNT(*)
+FROM Employee
+WHERE SALARY * MONTHS = (SELECT MAX(SALARY * MONTHS)
+                         FROM Employee)
+
